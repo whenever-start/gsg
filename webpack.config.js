@@ -12,7 +12,8 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
     environment: {
-      arrowFunction: false
+      arrowFunction: false,
+      const: false
     }
   },
 
@@ -31,7 +32,7 @@ module.exports = {
                   {
                     targets: {
                       chrome: '58',
-                      ie: '11'
+                      ie: '8'
                     },
                     corejs: '3',
                     useBuiltIns: 'usage'
@@ -89,5 +90,9 @@ module.exports = {
     }),
 
     new CleanWebpackPlugin()
-  ]
+  ],
+
+  resolve: {
+    extensions: ['.ts', '.js']
+  }
 }

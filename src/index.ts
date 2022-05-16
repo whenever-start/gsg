@@ -1,3 +1,5 @@
-import './style/index.less'
+import './assets/style/index.less'
 
-console.log(Promise)
+import Game from './modules/Game'
+
+const game = new Game()
